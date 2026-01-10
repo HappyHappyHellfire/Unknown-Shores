@@ -1,0 +1,110 @@
+/* ==============================
+   FLIP CARD
+============================== */
+
+.user-css .flip-card {
+  width: 400px;
+  height: 340px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* INNER WRAPPER */
+.user-css .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 4.0s;
+  transform-style: preserve-3d;
+}
+
+.user-css .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT AND BACK BASE */
+.user-css .flip-card-front,
+.user-css .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  background-image: url(https://www.worldanvil.com/i/6986890/render);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ==============================
+   FRONT SIDE
+============================== */
+
+.user-css .flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+}
+
+/* ARTICLE PANEL RESET */
+.user-css .flip-card-front .article-panel {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* BANNER IMAGE */
+.user-css .flip-card-front .article-panel img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 0 auto 26px auto;
+  border-radius: 0;
+  filter: brightness(0.82) contrast(1.05) sepia(0.15);
+}
+
+/* TITLE */
+.user-css .flip-card-front .article-panel .heading,
+.user-css .flip-card-front .article-panel .heading a,
+.user-css .flip-card-front .article-panel .heading h1,
+.user-css .flip-card-front .article-panel .heading h2,
+.user-css .flip-card-front .article-panel .heading h3 {
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  background: none;
+  text-shadow: none;
+  font-family: var(--font-header);
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+/* STOP GLOBAL LINK EFFECTS ON TITLE */
+.user-css .flip-card-front .article-panel .heading a:hover {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #000000;
+}
+
+/* ==============================
+   BACK SIDE
+============================== */
+
+.user-css .flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 26px;
+  font-family: var(--font-body);
+  text-align: center;
+}
