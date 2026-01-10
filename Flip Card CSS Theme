@@ -1,0 +1,1372 @@
+Theme with WORKING flip card Article Blocks:
+/* ==============================
+CSS THEME BY IMAGICA (aka Make lore, not war)
+MODIFIED AND REPAIRED
+============================= */
+
+/* ==============================
+   FONT FAMILIES
+============================= */
+
+/* HEADERS */
+@font-face {
+  font-family: Jim Nightshade;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jimnightshade/v20/PlIkFlu9Pb08Q8HLM1PxmB0g-NS_XXs.woff2);
+}
+
+/* MAIN TEXT */
+@font-face {
+  font-family: Cardo;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cardo/v20/wlp_gwjKBV1pqhv43IE.woff2);
+}
+
+/* BLOCKQUOTES */
+@font-face {
+  font-family: Island Moments;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/islandmoments/v7/NaPBcZfVGvBdxIt7Ar0qzkXJF9TBKIk.woff2);
+}
+
+/* META TEXT */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2);
+}
+
+:root {
+  --font-header: Jim Nightshade, Georgia, Times New Roman, sans-serif;
+  --font-body: Cardo, Garamond, serif;
+  --font-quote: Island Moments, cursive;
+  --font-meta: Montserrat, Arial, Helvetica, sans-serif;
+
+  --color-background: #04090F;
+  --color-background-gradient: linear-gradient(
+    180deg,
+    rgba(4, 9, 15, 1) 0%,
+    rgba(12, 30, 35, 1) 50%,
+    rgba(9, 42, 47, 1) 100%
+  );
+  --color-secondary-bg: #09121A;
+  --color-secondary-gradient: linear-gradient(
+    180deg,
+    rgba(9, 18, 26, 1) 0%,
+    rgba(14, 30, 38, 1) 100%
+  );
+
+  --color-text: #E6E1D8;
+  --color-muted: #BEB28F;
+
+  --color-link: #C68C53;
+  --color-link-hover: linear-gradient(
+    45deg,
+    #C68C53,
+    #FFDCC1,
+    #E07B21
+  );
+
+  --color-header: linear-gradient(
+    45deg,
+    #4A2C1A 15%,
+    #A85C32 35%,
+    #D98E5F 55%,
+    #A85C32 75%,
+    #4A2C1A 85%
+  );
+  --color-small-header: linear-gradient(
+    45deg,
+    #4A2C1A 0%,
+    #A85C32 10%,
+    #D98E5F 55%,
+    #A85C32 95%,
+    #4A2C1A 100%
+  );
+
+  --color-border: #B3744D;
+  --color-shadow: rgba(224, 180, 120, 0.4);
+  --color-header-shadow: rgba(0,0,0,0.3) 1px 1px 1px;
+  --color-accent: #D9A76F;
+  --author-css: Imagica;
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================= */
+@media (max-width: 768px) {
+  .user-css-presentation {
+    background-position: top center;
+    background-size: cover;
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css-presentation .world-navigation-palette-trigger .fa-list {
+    display: none !important;
+  }
+
+  .user-css-presentation #world-navigation-sidebar {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .user-css.page-world-homepage {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css.page-world-homepage #cover img {
+    opacity: 0.7;
+    filter: blur(0.3px) brightness(85%);
+  }
+
+  .user-css .world-subtitle {
+    letter-spacing: 1px;
+    text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css.page-world-homepage h2 {
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .credits {
+    padding: 6px 12px;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .primer {
+    border-image: none !important;
+    border: none !important;
+    margin: auto 0;
+    padding: 0 0;
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .bookcover img {
+    max-width: 90%;
+    filter: brightness(70%);
+  }
+
+  .user-css .bookcover img:hover {
+    transform: scale(1);
+    filter: brightness(70%);
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .overlay-wrapper,
+  .user-css .aloud {
+    background-color: var(--color-secondary-bg) !important;
+    mix-blend-mode: normal !important;
+    -webkit-mask-composite: none !important;
+    mask-image: none !important;
+    mask-composite: none !important;
+    border-image: none !important;
+    border: 2px solid var(--color-border);
+    border-radius: 12px !important;
+    margin: 16px auto !important;
+    padding: 16px 20px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .aloud * {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .user-css .aloud img,
+  .user-css .aloud video,
+  .user-css .aloud iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css .article-panel::before {
+    display: none !important;
+  }
+
+  .user-css .article-panel .details p {
+    display: none !important;
+    pointer-events: none !important;
+  }
+
+  .user-css .article-panel {
+    transform: none !important;
+    box-shadow: none !important;
+    padding: 16px;
+  }
+
+  .user-css .article-panel .heading,
+  .user-css .article-panel .subheading {
+    opacity: 1;
+    position: relative;
+    transform: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1920px) {
+  .user-css .social {
+    position: relative !important;
+    top: 0;
+    right: 0;
+    padding: 4px 6px !important;
+    gap: 8px;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    z-index: auto;
+  }
+
+  .user-css .social img {
+    height: 18px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css .social .d-block {
+    display: inline-flex !important;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css .map-box {
+    width: 90% !important;
+    margin: 10px 20px !important;
+    min-height: 250px;
+  }
+
+  .user-css .map-box .img-responsive.img-fluid {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .user-css .map-box:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css.world-global-header {
+    background: none !important;
+    padding: 0px;
+    opacity: 1;
+    position: relative !important;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1920px) {
+  .user-css .search-form .typeahead-input {
+    width: 180px !important;
+    height: 55px !important;
+    top: 55px !important;
+  }
+
+  .user-css-presentation .world-global-header {
+    height: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css hr {
+    height: 3px;
+    margin: 20px 0;
+  }
+
+  .user-css .breadbox .breadcrumb {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css .fas,
+  .user-css .ra {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .user-css .breadbox .breadcrumb {
+    display: block;
+  }
+}
+
+@media (max-width: 1400px) {
+  .user-css-extended {
+    margin: 0 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-css-extended {
+    margin: 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css-extended {
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-css-extended {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-css-extended h2 {
+    font-size: clamp(24px, 6vw, 50px);
+    letter-spacing: 1px;
+  }
+
+  .user-css-extended .comment-box .comment-box-author {
+    font-size: clamp(20px, 5vw, 35px);
+  }
+}
+
+@media (max-width: 480px) {
+  .user-css-extended {
+    padding: 0 10px;
+  }
+
+  .user-css-extended h2 {
+    font-size: clamp(20px, 7vw, 40px);
+  }
+
+  .user-css-extended .comment-form textarea {
+    height: 100px;
+  }
+}
+
+/* ==============================
+   MAIN BACKGROUND
+============================== */
+.user-css-presentation {
+  background-image: url(https://www.worldanvil.com/i/6982189/render);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 76, 76, 0.9);
+  background-blend-mode: multiply;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-css-presentation .world-global-header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  z-index: 1000;
+  background: url(https://www.worldanvil.com/i/6982210/render) center/cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: unset;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.user-css.world-global-header h1,
+.user-css.world-global-header h2,
+.user-css.world-global-header p {
+  color: var(--color-text, #f8f8f8);
+  margin: 0;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 32px);
+}
+
+.user-css {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 20, 40, 0.3) 0%,
+      rgba(0, 30, 30, 0.4) 80%
+    ),
+    url(https://www.worldanvil.com/i/6982205/render);
+  box-shadow: inset 0px 0px 20px var(--color-background);
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  box-sizing: border-box;
+  margin: clamp(20px, 12vw, 500px);
+}
+
+/* HOMEPAGE BASE RESET */
+.user-css.page-world-homepage {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.user-css.page-world-homepage h5 a {
+  font-family: var(--font-header);
+  font-size: 35px;
+  top: 20px;
+  position: relative;
+}
+
+.user-css-presentation .widget-white-label-mark {
+  margin: 0 auto;
+  font-family: var(--font-meta) !important;
+  color: var(--color-text) !important;
+  border: 2px solid var(--color-border);
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+}
+
+.user-css-presentation .widget-white-label-mark a {
+  margin: 0 auto;
+  font-family: var(--font-meta) !important;
+  font-size: 15px;
+}
+
+/* ==============================
+   HOMEPAGE COVER IMAGE VIGNETTE
+============================== */
+.user-css.page-world-homepage #cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 45%, transparent 100%),
+    linear-gradient(to top, black 65%, transparent 100%),
+    linear-gradient(to right, black 45%, transparent 100%),
+    linear-gradient(to left, black 45%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to bottom, black 45%, transparent 100%),
+    linear-gradient(to top, black 65%, transparent 100%),
+    linear-gradient(to right, black 45%, transparent 100%),
+    linear-gradient(to left, black 45%, transparent 100%);
+  mask-composite: intersect;
+  opacity: 0.6;
+  filter: blur(0.1px) brightness(90%);
+}
+
+/* ==============================
+   WORLD TITLE AND SUBTITLE
+============================== */
+.user-css .heading h1 {
+  margin: 0;
+  padding-top: 0.5em;
+  color: transparent;
+  line-height: 1.1;
+}
+
+.user-css .world-subtitle {
+  display: inline-block;
+  font-family: var(--font-quote);
+  font-size: clamp(30px, 5vw, 200px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  padding: 0.2em 0;
+  text-align: center;
+  background: var(--color-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  text-shadow: var(--color-header-shadow);
+}
+
+.user-css.page-world-homepage h2 {
+  font-family: var(--font-quote);
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 2px;
+  background: var(--color-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  font-size: clamp(35px, 5vw, 90px);
+  text-shadow: var(--color-header-shadow);
+  text-align: center;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.user-css .world-authors {
+  display: none;
+}
+
+.user-css .table-of-contents .world-menu {
+  display: none;
+}
+
+/* ==============================
+   WORLD NAVIGATION
+============================== */
+.user-css-presentation .world-navigation-palette-trigger .fa-list {
+  content: url(https://www.worldanvil.com/i/6982203/render);
+  width: 150px;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.user-css-presentation .world-navigation-palette-trigger {
+  background: none !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-css-presentation .world-navigation-palette-trigger:hover {
+  transform: rotate(-5deg);
+  filter:
+    drop-shadow(0 0 10px rgba(139, 69, 19, 0.4))
+    drop-shadow(0 0 10px rgba(205, 127, 50, 0.3))
+    drop-shadow(0 0 60px rgba(233, 170, 92, 0.5));
+}
+
+.user-css-presentation #world-navigation-sidebar {
+  width: clamp(200px, 20%, 250px);
+  max-height: 40vh;
+  left: 150px;
+  position: fixed;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 9, 15, 1) 0%,
+    rgba(9, 42, 47, 1) 100%
+  );
+  border: 2px solid var(--color-border);
+  box-shadow: inset 0 0 10px var(--color-muted);
+  text-align: center;
+  scrollbar-color: var(--color-muted) var(--color-background);
+  border-top: 5px double var(--color-muted);
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: auto;
+  z-index: 1500;
+}
+
+.user-css .world-meta-categories-link,
+.user-css .world-menu,
+.user-css .world-toc-header,
+.user-css.page.sidebar-panel-open .world-timelines {
+  display: none;
+}
+
+.user-css .world-navigation-custom-content h2 {
+  font-family: var(--font-header);
+  border-bottom: 3px double var(--color-border);
+  background: var(--color-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  font-size: clamp(24px, 4vw, 40px);
+  text-align: center;
+}
+
+.user-css .world-navigation-custom-content a {
+  display: block;
+  line-height: 1.9em;
+  font-weight: 400;
+  font-size: clamp(14px, 4vw, 20px);
+  font-family: var(--font-body);
+  color: var(--color-link);
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.user-css .world-navigation-custom-content a:hover {
+  color: var(--color-accent);
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+.user-css-presentation #world-navigation-sidebar .map-box {
+  display: none;
+}
+
+.user-css-presentation #world-navigation-sidebar .maps-list-header {
+  display: none;
+}
+
+/* ==============================
+   LINKS
+============================== */
+.user-css a {
+  color: var(--color-link);
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.2vw, 25px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.user-css a:not(.btn):not(.world-navigation-custom-content a):hover {
+  background: var(--color-link-hover);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: var(--color-shadow);
+}
+
+.user-css a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-link), transparent);
+  transition: width 0.4s ease;
+}
+
+.user-css a:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   CREDITS CONTAINER
+============================== */
+.user-css .credits {
+  color: var(--color-text);
+  margin: 12px auto;
+  padding: 8px 16px;
+  font-family: var(--font-meta);
+  font-size: clamp(12px, 1.2vw, 16px);
+  line-height: 1.4;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.user-css .credits:hover {
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(224, 200, 168, 0.4);
+  transform: scale(1.02);
+}
+
+.user-css .credits a {
+  font-family: var(--font-meta);
+  font-size: clamp(12px, 1.2vw, 16px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ==============================
+   OVERLAY WRAPPER
+============================== */
+.user-css .overlay-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.user-css .overlay-base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://www.worldanvil.com/i/6982205/render);
+  background-position: center;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.user-css .overlay-top {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   PRIMER CONTAINER
+============================== */
+.user-css .primer {
+  position: relative;
+  border-style: solid;
+  border-width: 90px;
+  border-image: url(https://www.worldanvil.com/i/6982193/render) 900;
+  border-image-outset: 12px 7px;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.5vw, 22px);
+  color: var(--color-text);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* ==============================
+  ALOUD CONTAINER
+============================== */
+.user-css .aloud {
+  position: relative;
+  margin: 50px auto;
+  padding: 160px;
+  border-image-source: url(https://www.worldanvil.com/i/6982212/render);
+  border-image-slice: 200 fill;
+  border-image-repeat: round;
+  border-image-width: 200px;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 3.6vw, 25px);
+  font-style: normal;
+  color: var(--color-muted);
+  text-shadow: var(--color-shadow);
+  mix-blend-mode: difference;
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to bottom, black 65%, transparent 100%),
+    linear-gradient(to top, black 75%, transparent 100%),
+    linear-gradient(to right, black 95%, transparent 100%),
+    linear-gradient(to left, black 95%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* ==============================
+   SOCIAL CONTAINER
+============================== */
+.user-css .social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px 15px;
+  font-family: var(--font-header);
+  font-size: clamp(15px, 1.5vw, 25px);
+  color: var(--color-link);
+  text-shadow: 0 0 5px var(--color-shadow);
+  background: var(--color-background);
+  opacity: 0.5;
+  pointer-events: auto;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+}
+
+.user-css .social img {
+  height: 28px;
+  width: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.user-css .social img:hover {
+  transform: scale(1.4);
+}
+
+/* ==============================
+   BLOCKQUOTE
+============================== */
+.user-css blockquote,
+.user-css-presentation .tooltipster-content blockquote {
+  display: block;
+  max-width: 900px;
+  margin: 0.5em auto;
+  padding: 30px 40px 20px;
+  background: var(--color-background-gradient);
+  border-radius: 20px;
+  border: 2px solid var(--color-border);
+  font-family: var(--font-quote);
+  font-size: clamp(18px, 2.5vw, 35px);
+  color: var(--color-link);
+  line-height: 1.6;
+  text-align: center;
+  box-shadow: 0 0px 10px var(--color-accent);
+  transition: all 1s ease;
+  animation: floatQuote 4s ease-in-out infinite;
+}
+
+.user-css blockquote a {
+  font-size: clamp(18px, 2.5vw, 35px);
+  color: var(--color-accent);
+  font-family: var(--font-quote);
+}
+
+.user-css blockquote:hover {
+  box-shadow: inset 0 0 20px var(--color-shadow);
+  rotate: 1deg;
+}
+
+.user-css blockquote .author {
+  font-family: var(--font-meta);
+  font-size: 14px;
+  color: var(--color-muted);
+  opacity: .7;
+  font-style: normal;
+  text-align: right;
+}
+
+.user-css blockquote .author a {
+  font-family: var(--font-meta);
+  font-size: 14px;
+}
+
+@keyframes floatQuote {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px) rotate(-0.2deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+/* ==============================
+   MAP BOX
+============================== */
+.user-css .map-box {
+  width: clamp(300px, 40%, 700px);
+  display: inline-block;
+  background: url(https://www.worldanvil.com/i/6982188/render) center/cover no-repeat;
+  border: 2px solid var(--color-border);
+  border-radius: 15px;
+  height: auto;
+  min-height: 300px;
+  margin: 30px;
+  margin-left: 60px;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-text);
+}
+
+.user-css .map-box .p-20 {
+  padding: 0 !important;
+  margin: 0 auto;
+  height: 90px;
+  background: var(--color-background);
+  opacity: 0.8;
+  transform: translateY(-5px);
+}
+
+.user-css .map-box h5 {
+  font-family: var(--font-header);
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 700;
+  background: var(--color-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  text-shadow: rgba(0,0,0,0.3) 1px 1px 2px;
+  transform: translateY(5px);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.user-css .map-box .img-responsive.img-fluid {
+  opacity: 0;
+  border-radius: 12px 12px 0 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.user-css .map-box:hover .img-responsive.img-fluid {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.user-css .map-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(217, 142, 95, 0.4);
+}
+
+/* ==============================
+   FOLLOW BUTTON
+============================== */
+.user-css .primer .btn-success {
+  background-color: var(--color-secondary-bg) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-link) !important;
+  font-family: var(--font-quote);
+  font-size: clamp(16px, 2.5vw, 30px);
+  letter-spacing: 1.5px;
+  transition: transform 2s ease, filter 0.3s ease, border 0.3s ease, color 1s ease;
+}
+
+.user-css .primer .btn-success:hover {
+  transform: scale(1.1);
+  border: 0px solid transparent !important;
+  background: var(--color-link-hover);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  box-shadow: none;
+}
+
+.user-css .btn-success:focus,
+.user-css .btn-success:active,
+.user-css .btn-primary:focus,
+.user-css .btn-primary:active,
+.user-css .btn-info:focus,
+.user-css .btn-info:active,
+.user-css .btn-danger:focus,
+.user-css .btn-danger:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.user-css .btn-primary,
+.user-css .btn-success {
+  background: linear-gradient(145deg, #0d2f2f, #081a1a);
+  border: 1px solid #0f3d46 !important;
+  padding: 10px 20px 5px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-family: var(--font-meta);
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-css .btn-primary:hover {
+  background: linear-gradient(145deg, #124444, #0b2222);
+  box-shadow: inset 0 0 10px rgba(168, 255, 222, 0.4),
+              0 3px 8px rgba(0, 0, 0, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ==============================
+    PANEL DEFAULT
+============================== */
+.user-css .panel-default {
+  background: linear-gradient(145deg, #0d2f2f, #081a1a);
+  border: 1px solid #0f3d46 !important;
+  padding: 10px 20px 5px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-family: var(--font-meta);
+  font-size: 15px;
+  color: var(--color-text);
+  word-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-css .panel-default .btn-primary {
+  background: transparent !important;
+  border: none !important;
+}
+
+.user-css .panel-default a {
+  font-family: var(--font-quote);
+  color: var(--color-link);
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.user-css .panel-default a:hover {
+  text-decoration: none;
+}
+
+.user-css .article-content .panel-default {
+  position: relative;
+  display: block;
+  padding: 50px;
+  background-color: rgba(4, 9, 15, 0.7);
+  border: 3px solid var(--color-border);
+  box-shadow: inset 0 0 10px var(--color-muted);
+  word-spacing: 3px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 20px;
+}
+
+.user-css .article-content .panel-default a {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ==============================
+   SEARCH BAR
+============================== */
+.user-css .search-form .typeahead-input {
+  z-index: 1200;
+  position: fixed;
+  top: calc(var(--header-height, 90px));
+  width: 100%;
+  left: -1px;
+  text-align: center;
+  background: var(--color-secondary-gradient);
+  font-family: var(--font-header);
+  font-size: clamp(18px, 2.5vw, 25px);
+  color: var(--color-accent);
+  letter-spacing: 2px;
+  padding: clamp(5px, 3vw, 10px) 0 clamp(8px, 2vw, 5px);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes breathing {
+  0% { box-shadow: 0 0 6px rgba(255, 215, 170, 0.2); }
+  50% { box-shadow: 0 0 14px rgba(255, 215, 170, 0.4); }
+  100% { box-shadow: 0 0 6px rgba(255, 215, 170, 0.2); }
+}
+
+.user-css .search-form .typeahead-input:focus {
+  animation: breathing 2s infinite ease-in-out;
+  border-color: var(--color-accent);
+}
+
+.user-css-presentation .row .world-content {
+  text-align: center !important;
+}
+
+.user-css-presentation .world-global-header .d-block {
+  display: flex !important;
+}
+
+/* ==============================
+   ARTICLE HEADERS
+============================== */
+.user-css .article-content h1 {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  font-size: clamp(32px, 6vw, 80px);
+  text-align: center;
+  background: var(--color-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  margin-top: 40px;
+}
+
+.user-css .article-content h2 {
+  font-size: clamp(24px, 4vw, 55px);
+  border-bottom: 2px solid var(--color-link);
+  font-family: var(--font-header);
+  background: var(--color-small-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-css .article-content h3,
+.user-css .article-content h4,
+.user-css .article-content h5 {
+  font-family: var(--font-header);
+  background: var(--color-small-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.user-css .article-content h3 {
+  font-size: clamp(22px, 3.5vw, 50px);
+}
+
+.user-css .article-content h4 {
+  font-size: clamp(20px, 3vw, 45px);
+}
+
+.user-css .article-content h5 {
+  font-size: clamp(18px, 2.5vw, 35px);
+}
+
+/* ==============================
+   ARTICLE CONTENT
+============================== */
+.user-css .article-content {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-size: clamp(16px, 1.2vw, 25px);
+  line-height: 1.6;
+}
+
+.user-css #cover img {
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to bottom, black 15%, transparent 100%),
+    linear-gradient(to top, black 80%, transparent 100%);
+  mask-composite: intersect;
+  opacity: 0.7;
+  filter: brightness(90%);
+}
+
+.user-css .dropcap {
+  font-family: var(--font-quote);
+  font-size: 150px;
+  margin-right: 5px;
+}
+
+.user-css .article-horizontal-navigation a {
+  font-family: var(--font-quote);
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.user-css .read-document-data-main {
+  background: var(--color-background-gradient);
+  border: 5px solid var(--color-border);
+  border-radius: 2px;
+}
+
+.user-css .discussion-board-section {
+  color: white;
+  font-family: var(--font-meta);
+  font-size: 20px;
+  background: var(--color-background-gradient);
+}
+
+.user-css .template-generic_random_generator-nulcheck-208,
+.user-css .template-refresh_page-solarcat02-208 {
+  background: transparent;
+  position: relative;
+  top: 40px;
+  padding: 10px 0 0 0;
+}
+
+.user-css .world-menu-subcategory {
+  border: 5px solid var(--color-border);
+  border-radius: 10px 0 10px;
+  background: var(--color-secondary-bg);
+}
+
+.user-css .discussion-board-wrap {
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: 5px 0;
+}
+
+.user-css .mt-4 {
+  background: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: 5px 0;
+}
+
+.user-css .statblock {
+  border: none;
+}
+
+.article-title h1 {
+  display: block;
+  animation: comein 1.0s 1 ease-in-out forwards;
+}
+
+@keyframes comein {
+  0% { letter-spacing: -5em; }
+  100% { letter-spacing: -0.02em; }
+}
+
+.user-css .article-panel .subheading,
+.user-css-extended .article-panel .subheading {
+  display: none;
+}
+
+/* ==============================
+   GLOBAL IMAGE ASPECT RATIO FIX
+============================== */
+.user-css img,
+.user-css-extended img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ==============================
+   FLIP CARD
+============================== */
+
+.user-css .flip-card {
+  width: 400px;
+  height: 340px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* INNER WRAPPER */
+.user-css .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 4.0s;
+  transform-style: preserve-3d;
+}
+
+.user-css .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT AND BACK BASE */
+.user-css .flip-card-front,
+.user-css .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  background-image: url(https://www.worldanvil.com/i/6986890/render);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ==============================
+   FRONT SIDE
+============================== */
+
+.user-css .flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+}
+
+/* ARTICLE PANEL RESET */
+.user-css .flip-card-front .article-panel {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* BANNER IMAGE */
+.user-css .flip-card-front .article-panel img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 0 auto 26px auto;
+  border-radius: 0;
+  filter: brightness(0.82) contrast(1.05) sepia(0.15);
+}
+
+/* TITLE */
+.user-css .flip-card-front .article-panel .heading,
+.user-css .flip-card-front .article-panel .heading a,
+.user-css .flip-card-front .article-panel .heading h1,
+.user-css .flip-card-front .article-panel .heading h2,
+.user-css .flip-card-front .article-panel .heading h3 {
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  background: none;
+  text-shadow: none;
+  font-family: var(--font-header);
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+/* STOP GLOBAL LINK EFFECTS ON TITLE */
+.user-css .flip-card-front .article-panel .heading a:hover {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #000000;
+}
+
+/* ==============================
+   BACK SIDE
+============================== */
+
+.user-css .flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 26px;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+/* ==============================
+   BOOK BLOCK NORMALIZATION
+============================== */
+
+.user-css .bookcover,
+.user-css .book {
+  width: 300px;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+}
+
+/* CONTROL BOOK COVER IMAGE SIZE */
+.user-css .bookcover img {
+  max-width: 100%;
+  height: auto;
+  transform: none;
+}
+
+/* HIDE EXTRA BOOK METADATA */
+.user-css .bookcover .excerpt,
+.user-css .bookcover .details,
+.user-css .bookcover .subheading,
+.user-css .bookcover .book-meta,
+.user-css .bookcover .book-description {
+  display: none;
+}
+
+/* KEEP TITLE ONLY */
+.user-css .bookcover .booktitle {
+  font-family: var(--font-header);
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  text-shadow: none;
+  text-align: center;
+}
+/* PREVENT BOOKS FROM ACTING LIKE ARTICLE PANELS */
+.user-css .bookcover,
+.user-css .bookcover * {
+  box-shadow: none;
+  background: transparent;
+}
