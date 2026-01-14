@@ -848,7 +848,6 @@ margin-bottom: 10px;
 }
 
 /* Excerpt text with mysterious reveal */
-/* Excerpt text with mysterious reveal */
 .user-css .article-panel .details p {
   position: absolute;
   top: 0;
@@ -984,6 +983,8 @@ cursor: pointer;
 .user-css .social img:hover {
 transform: scale(1.4);
 }
+
+
 /* ==============================
 BLOCKQUOTE   ============================== */
 .user-css blockquote, .user-css-presentation .tooltipster-content blockquote {
@@ -1349,6 +1350,7 @@ font-family: var(--font-quote);
 font-size: 45px;
 letter-spacing: 2px;
 }
+
 /* ==============================
 COMMENT SECTION   ============================== /
 .user-css-extended {
