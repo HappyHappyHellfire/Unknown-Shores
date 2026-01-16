@@ -1,12 +1,12 @@
 /* ==============================
+   THEME CREDIT
    CSS THEME BY IMAGICA (aka Make lore, not war)
-   &
    RUINED BY: SOLOMONJACK
 ============================== */
 
 
 /* ==============================
-   FONT FAMILIES
+   FONTS: EMBEDDED FONT FILES
 ============================== */
 
 /* HEADERS */
@@ -57,7 +57,7 @@
   --font-quote: Island Moments, cursive;
   --font-meta: Montserrat, Arial, Helvetica, sans-serif;
 
-  /* alias used later */
+  /* Alias used later */
   --font-text: var(--font-body);
 
   /* BACKGROUNDS */
@@ -112,7 +112,7 @@
 
 
 /* ==============================
-   MOBILE RESPONSIVENESS
+   RESPONSIVE: MOBILE + TABLET
 ============================== */
 
 @media (max-width: 768px) {
@@ -389,12 +389,11 @@
 
 
 /* ==============================
-   MAIN BACKGROUND
+   BACKGROUND: PRESENTATION WRAPPER
 ============================== */
 
 .user-css-presentation {
   background-image: url(https://www.worldanvil.com/i/6982189/render);
-  hookup: 0;
   background-size: cover;
   background-position: center;
   background-color: rgba(0, 76, 76, 0.9);
@@ -446,7 +445,7 @@
 
 
 /* ==============================
-   HOMEPAGE BASE RESET
+   HOMEPAGE: BASE RESET
 ============================== */
 
 .user-css.page-world-homepage {
@@ -478,7 +477,7 @@
 
 
 /* ==============================
-   HOMEPAGE COVER IMAGE VIGNETTE
+   HOMEPAGE: COVER IMAGE VIGNETTE
 ============================== */
 
 .user-css.page-world-homepage #cover img {
@@ -506,7 +505,7 @@
 
 
 /* ==============================
-   WORLD TITLE & SUBTITLE
+   WORLD: TITLE + SUBTITLE
 ============================== */
 
 .user-css .heading h1 {
@@ -535,7 +534,7 @@
 
 
 /* ==============================
-   H1 HEADERS HOMEPAGE ONLY
+   HOMEPAGE: H2 HEADERS ONLY
 ============================== */
 
 .user-css.page-world-homepage h2 {
@@ -556,7 +555,7 @@
 
 
 /* ==============================
-   HIDE AUTHORS / TOC MENU
+   WORLD: HIDE AUTHORS + TOC MENU
 ============================== */
 
 .user-css .world-authors {
@@ -775,7 +774,7 @@
 
 
 /* ==============================
-   ARTICLE PANEL
+   ARTICLE PANELS: BASE + HOVER EXCERPT
 ============================== */
 
 .user-css .article-panel {
@@ -807,8 +806,14 @@
   display: none;
 }
 
+/* IMPORTANT: World Anvil strips quotes.
+   So content cannot be empty string.
+   This makes the pseudo-element exist without visible text. */
 .user-css .article-panel::before {
-  content: "";
+  content: close-quote;
+  font-size: 0;
+  line-height: 0;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -893,7 +898,7 @@
 
 
 /* ==============================
-   BLOCKQUOTE
+   BLOCKQUOTES
 ============================== */
 
 .user-css blockquote,
@@ -948,7 +953,7 @@
 
 
 /* ==============================
-   MAP-BOX
+   MAP BOXES
 ============================== */
 
 .user-css .map-box {
@@ -1009,7 +1014,7 @@
 
 
 /* ==============================
-   FOLLOW BUTTON
+   BUTTONS: FOLLOW + PRIMARY
 ============================== */
 
 .user-css .primer .btn-success {
@@ -1065,7 +1070,7 @@
 
 
 /* ==============================
-   PANEL DEFAULT
+   PANELS: DEFAULT
 ============================== */
 
 .user-css .panel-default {
@@ -1211,7 +1216,7 @@
 
 
 /* ==============================
-   ARTICLE CONTENT
+   ARTICLE CONTENT BASE
 ============================== */
 
 .user-css .article-content {
@@ -1309,7 +1314,7 @@
 
 
 /* ==============================
-   COMMENT SECTION
+   COMMENTS SECTION (EXTENDED)
 ============================== */
 
 .user-css-extended {
@@ -1621,7 +1626,7 @@
 
 
 /* ==============================
-   BOOK COVER
+   BOOK COVERS
 ============================== */
 
 .user-css .bookcover {
@@ -1683,7 +1688,7 @@
 
 
 /* ==============================
-   ARTICLE IMAGE BORDER
+   ARTICLE IMAGES: BORDER + FILTER
 ============================== */
 
 .user-css .article-content .img-responsive.img-fluid,
@@ -1870,7 +1875,7 @@
 
 
 /* ==============================
-   IMAGE ASPECT RATIO FIX
+   IMAGES: ASPECT RATIO FIX
 ============================== */
 
 .user-css img,
@@ -1890,7 +1895,7 @@
 
 
 /* ==============================
-   QUOTE EFFECT (hover-reveal)
+   QUOTE EFFECT (HOVER REVEAL)
 ============================== */
 
 .user-css .burn-wrapper {
@@ -1988,7 +1993,7 @@
 
 
 /* ==============================
-   NAV ICON ANIMATION (final version)
+   NAV ICON ANIMATION
 ============================== */
 
 .user-css-presentation .world-navigation-palette-trigger .fa-list {
@@ -2062,14 +2067,14 @@
   }
 }
 
+
 /* ==============================
-   EXCERPT: foggy -> focus (WORKING)
-   Paste at very bottom
+   EXCERPT: FOGGY -> FOCUS (WORKING)
 ============================== */
 
 .user-css .article-panel .details p.excerpt {
-  opacity: 0 !important;                 /* hide until hover */
-  filter: blur(12px) brightness(1.15);   /* NO !important here */
+  opacity: 0 !important;
+  filter: blur(12px) brightness(1.15);
   transform: translateY(8px) scale(1.02);
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -2077,19 +2082,15 @@
 
 .user-css .article-panel:hover .details p.excerpt {
   opacity: 1 !important;
-  animation: waExcerptFocus 1.1s ease forwards;
+  animation:
+    waExcerptFocus 1.1s ease forwards,
+    waFlicker 3.2s ease-in-out infinite;
 }
 
 @keyframes waExcerptFocus {
   0%   { filter: blur(12px) brightness(1.20); transform: translateY(8px) scale(1.02); }
   70%  { filter: blur(1px)  brightness(1.05); transform: translateY(0)  scale(1); }
-  100% { filter: none;                   transform: translateY(0)  scale(1); }
-}
-/* A3) Gentle flicker (very subtle) */
-.user-css .article-panel:hover .details p.excerpt {
-  animation:
-    waExcerptFocus 1.1s ease forwards,
-    waFlicker 3.2s ease-in-out infinite;
+  100% { filter: none;                      transform: translateY(0)  scale(1); }
 }
 
 @keyframes waFlicker {
@@ -2098,4 +2099,3 @@
   50%      { opacity: 0.985; }
   52%      { opacity: 0.97; }
 }
-
