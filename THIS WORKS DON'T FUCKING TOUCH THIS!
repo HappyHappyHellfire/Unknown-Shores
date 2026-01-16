@@ -1617,7 +1617,12 @@
   font-size: 20px;
   line-height: 1.5em;
 }
-
+/* ==============================
+   "While digging for burried treasure,
+   your shovel suddenly hits something solid. Something made of Wood.
+   Clearing away the sand, you disover an old wooden chest. Upon opening
+   it, you find a single dusty scroll." - (1ee1db34-eecf-4c80-b9f1-4d15cc280296)
+============================== */
 .user-css .spoiler-content:focus,
 .user-css .spoiler-content:active {
   outline: none !important;
