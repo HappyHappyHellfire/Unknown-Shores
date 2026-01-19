@@ -2512,17 +2512,84 @@
   display: none;
 }
 
-/* Move Patreon button to bottom-right corner */
-.user-css .patreon-btn,
-.user-css a[href*="patreon.com"] {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  z-index: 100;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+/* ==============================
+   STICKER SECTION - TREASURE DISPLAY
+============================== */
+.user-css .stickers-article-collection {
+  position: relative;
+  background: 
+    radial-gradient(ellipse at center, rgba(20, 12, 8, 0.9) 0%, rgba(4, 9, 15, 0.95) 70%),
+    url(https://www.worldanvil.com/i/6982205/render);
+  border: none;
+  border-radius: 0;
+  padding: 50px 40px 40px;
+  margin: 50px auto;
+  max-width: 600px;
+  
+  clip-path: polygon(
+    0% 2%, 3% 0%, 7% 1%, 12% 0%, 18% 2%, 25% 0%, 
+    32% 1%, 40% 0%, 48% 2%, 55% 0%, 63% 1%, 70% 0%,
+    78% 2%, 85% 0%, 92% 1%, 97% 0%, 100% 2%,
+    100% 98%, 97% 100%, 92% 99%, 85% 100%, 78% 98%,
+    70% 100%, 63% 99%, 55% 100%, 48% 98%, 40% 100%,
+    32% 99%, 25% 100%, 18% 98%, 12% 100%, 7% 99%, 3% 100%, 0% 98%
+  );
+  
+  box-shadow: 
+    inset 0 0 80px rgba(217, 167, 111, 0.15),
+    inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-.user-css a[href*="patreon.com"]:hover {
-  opacity: 1;
+/* Header */
+.user-css .stickers-article-collection h4 {
+  font-family: var(--font-header);
+  font-size: clamp(28px, 4vw, 45px);
+  color: var(--color-accent);
+  -webkit-text-fill-color: var(--color-accent);
+  background: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0 0 25px 0;
+  padding: 10px 20px;
+  border: 2px solid var(--color-border);
+  border-left: none;
+  border-right: none;
 }
+
+/* Individual stickers */
+.user-css .stickers-article-collection .sticker-collection-sticker {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: sepia(0.3) brightness(0.85);
+  cursor: pointer;
+}
+
+.user-css .stickers-article-collection .sticker-collection-sticker:hover {
+  filter: sepia(0) brightness(1.1);
+  transform: scale(1.25) rotate(-3deg) translateY(-10px);
+  z-index: 10;
+  animation: stickerFloat 2s ease-in-out infinite;
+}
+
+@keyframes stickerFloat {
+  0%, 100% { 
+    transform: scale(1.25) rotate(-3deg) translateY(-10px);
+    filter: brightness(1.1) drop-shadow(0 0 8px var(--color-accent));
+  }
+  50% { 
+    transform: scale(1.25) rotate(-1deg) translateY(-15px);
+    filter: brightness(1.2) drop-shadow(0 0 15px var(--color-accent)) drop-shadow(0 0 30px var(--color-link));
+  }
+}
+
+@media (max-width: 600px) {
+  .user-css .stickers-article-collection {
+    padding: 40px 25px 30px;
+    margin: 30px 10px;
+    max-width: 100%;
+    clip-path: none;
+    border-radius: 8px;
+    border: 2px solid var(--color-border);
+  }
+}
+
