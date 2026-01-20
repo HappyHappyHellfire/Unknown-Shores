@@ -1,0 +1,9 @@
+Copy everything below this line, and paste it into your article wherever you want to use it. The part you can modify is found at the bottom. Make sure to not delete any of the brackets or containers, or the whole thing will break!
+----------------------------
+
+[container:fantasyspoil]
+[container:lockbutton][spoiler]|[/spoiler][container:lockcontent]
+
+--THIS IS WHERE YOU PUT YOUR CUSTOM CONTENT--
+
+[/container][/container][/container]
