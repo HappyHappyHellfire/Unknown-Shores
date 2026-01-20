@@ -527,4 +527,38 @@ transform: rotateX(0);
 }
 .fantasylock .slide1tab7 .spoiler-button:focus, 
 .fantasylock .slide2tab7 .spoiler-button:focus, 
-.fantasylock .slide3tab7 .spoiler-
+.fantasylock .slide3tab7 .spoiler-button:focus,
+.fantasylock .slide4tab7 .spoiler-button:focus,
+.fantasylock .slide5tab7 .spoiler-button:focus,
+.fantasylock .slide6tab7 .spoiler-button:focus {
+    background: url(https://www.worldanvil.com/uploads/images/ad36f7688644b025d19ab584812b3a04.png) !important;
+    z-index: 4;
+}
+.fantasylock .slide1tab8 .spoiler-button:focus, 
+.fantasylock .slide2tab8 .spoiler-button:focus, 
+.fantasylock .slide3tab8 .spoiler-button:focus,
+.fantasylock .slide4tab8 .spoiler-button:focus,
+.fantasylock .slide5tab8 .spoiler-button:focus,
+.fantasylock .slide6tab8 .spoiler-button:focus {
+    background: url(https://www.worldanvil.com/uploads/images/4c44d9928cd3b54a52e78c0320849cc2.png) !important;
+    z-index: 3;
+}
+.fantasylock .slide1tab9 .spoiler-button:focus, 
+.fantasylock .slide2tab9 .spoiler-button:focus, 
+.fantasylock .slide3tab9 .spoiler-button:focus,
+.fantasylock .slide4tab9 .spoiler-button:focus,
+.fantasylock .slide5tab9 .spoiler-button:focus,
+.fantasylock .slide6tab9 .spoiler-button:focus {
+    background: url(https://www.worldanvil.com/uploads/images/ece4aefa7592f5523bdf2160d2c57229.png) !important;
+    z-index: 2;
+}
+.fantasylock .slide1tab0 .spoiler-button:focus, 
+.fantasylock .slide2tab0 .spoiler-button:focus, 
+.fantasylock .slide3tab0 .spoiler-button:focus,
+.fantasylock .slide4tab0 .spoiler-button:focus,
+.fantasylock .slide5tab0 .spoiler-button:focus,
+.fantasylock .slide6tab0 .spoiler-button:focus {
+    background: url(https://www.worldanvil.com/uploads/images/02045f88145e5a1a002a9ea8171cee5f.png) !important;
+    z-index: 1;
+    pointer-events: none;
+}
