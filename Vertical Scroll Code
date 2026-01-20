@@ -1,0 +1,19 @@
+[container:vertisimplescroll]
+[spoiler]|Open[/spoiler]
+[container:scrollcontent]
+
+----This is where you put your content within the scroll!----
+
+[/container]
+[container:scrollbg] [/container]
+[container:scroll]
+[container:scroll1] [/container]
+[container:scroll2] [/container]
+[container:scroll3] [/container]
+[container:scroll4] [/container]
+[container:scroll5] [/container]
+[container:scroll6] [/container]
+[container:scroll7] [/container]
+[container:scroll8] [/container]
+[/container]
+[/container]
