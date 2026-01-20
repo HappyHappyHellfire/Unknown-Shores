@@ -1,0 +1,173 @@
+/*Edit this if you want to change the styling of the text within the scroll*/
+.simplescroll .scrollcontent {
+    color: #3A1D18;
+    font-weight: 900;
+    font-size: 17px;
+}
+.simplescroll .scrollcontent h2{
+    color: #3A1D18;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+/*Rules for revealing the scroll content, and positioning*/
+@keyframes scrolltext {
+0% {display: block;
+    opacity: 0%;}
+10% {text-shadow: 0 0 0 white;}
+
+30% {text-shadow: 0px 0px 50px white, 0px 0px 30px white;}
+
+60% {text-shadow: 0px 0px 20px white;}
+
+100% {
+    display: block;
+    opacity: 100%;}}
+
+.simplescroll {
+    display: block;
+    position: relative;
+    z-index: 5;
+    height: 450px;
+}
+
+.simplescroll .spoiler-card {
+    display: none;
+}
+
+.simplescroll .well,
+.simplescroll .collapse.in,
+.simplescroll .collapsing {
+    display: none;
+}
+
+.simplescroll .spoiler-button[aria-expanded$=true] ~ .scrollcontent {
+    text-shadow: 0px 0px 15px white;
+    display: block;
+    z-index: 1;
+    width: 630px;
+    inline-size: 630px; 
+    clip-path: inset(0 0% 0 0);
+    transition: all 2s;
+    overflow: hidden;
+    padding-right: 10px;
+}
+.simplescroll .scrollcontent {
+    position: absolute;
+    z-index: 1;
+    width: 630px;
+    height: 400px;
+    padding: 10px;
+    clip-path: inset(0 92% 0 0);
+    padding-left: 50px;
+    transition: all 2.2s;
+    overflow: hidden;
+}
+
+.simplescroll .spoiler-button[aria-expanded$=true] ~ .scrollbg {
+    width: 640px;
+    transition: 2s;
+}
+.simplescroll .scrollbg {
+    width: 50px;
+    height: 400px;
+    left: 20px;
+    position: absolute;
+    background: linear-gradient(to left,
+          rgba(0, 0, 0, 0.3), 
+          rgba(0, 0, 0, 0.0)
+        ),
+        url(https://www.worldanvil.com/uploads/images/d699204d24cf8d858745f4cbc106a3af.png);
+    transition: 2s;
+}
+
+
+/*Spoiler button styling rules, including what happesn when the button is hovered, and then clicked on*/
+.simplescroll .spoiler-button {
+    position: absolute;
+    z-index: 5;
+    margin: 0px;
+    left: 35px;
+    width: 80px;
+    height: 400px;
+    opacity: 0%;
+}
+.simplescroll .spoiler-button:hover {
+    left: 38px;
+}
+.simplescroll .spoiler-button[aria-expanded$=true] {
+    left: 635px;
+}
+.simplescroll .spoiler-button[aria-expanded$=true]:hover {
+    left: 625px;
+    transition: all 1s;
+}
+
+
+/*Rotation and animation of the scroll rolling to the side -- no need to modify these.*/
+.simplescroll .spoiler-button:hover ~ .scroll {
+    transform: rotateY(30deg);
+    left: 80px;
+}
+
+.simplescroll .spoiler-button[aria-expanded$=true]:hover ~ .scroll {
+    transform: rotateY(720deg);
+    left: 640px;
+}
+
+.simplescroll .spoiler-button[aria-expanded$=true] ~ .scroll {
+    transform: rotateY(760deg);
+    left: 645px;
+}
+
+/*THIOS SECTION IS FOR WRAPPING THE IMAGE AROUND A CYLINDER. You should not need to modify anything in here.*/
+.simplescroll .scroll {
+    transform-style: preserve-3d;
+    position: relative;
+    left: 70px;
+    transform: rotateY(0deg);
+    transition: all 2s;
+    transform-origin: 2.4%;
+    z-index: 2;
+}
+
+.simplescroll .scroll1,
+.simplescroll .scroll2,
+.simplescroll .scroll3,
+.simplescroll .scroll4,
+.simplescroll .scroll5,
+.simplescroll .scroll6,
+.simplescroll .scroll7,
+.simplescroll .scroll8 {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 25px;
+    height: 400px;
+    background: #000 url(https://www.worldanvil.com/uploads/images/9f0f00a10595514171d9147df84355c7.png);
+    border-top: 5px solid rgb(145,87,0);
+    border-bottom: 5px solid rgb(145,87,0);
+}
+.simplescroll .scroll1 {
+    background-position: 622px;
+    transform: rotateY(45deg) translateZ(30px);}
+.simplescroll .scroll2 {
+    background-position: 544.25px;
+    transform: rotateY(90deg) translateZ(30px);}
+.simplescroll .scroll3 {
+    background-position: 466.5px;
+    transform: rotateY(135deg) translateZ(30px);}
+.simplescroll .scroll4 {
+    background-position: 388.75px;
+    transform: rotateY(180deg) translateZ(30px);}
+.simplescroll .scroll5 {
+    background-position: 311px;
+    transform: rotateY(225deg) translateZ(30px);}
+.simplescroll .scroll6 {
+    background-position: 233.25px;
+    transform: rotateY(270deg) translateZ(30px);}
+.simplescroll .scroll7 {
+    background-position: 155.5px;
+    transform: rotateY(315deg) translateZ(30px);}
+.simplescroll .scroll8 {
+    background-position: 77.75px;
+    transform: rotateY(360deg) translateZ(30px);}
