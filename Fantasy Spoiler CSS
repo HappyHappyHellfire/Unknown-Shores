@@ -1,0 +1,94 @@
+/*Simple Fantasy Spoiler*/
+.fantasyspoil {
+    margin-top: -120px;
+    margin-left: -15px;
+}
+
+.fantasyspoil .well,
+.fantasyspoil .card {
+    display: none;
+}
+
+.fantasyspoil .lockcontent {
+    width: 93%;
+    right: -34px;
+    position: relative;
+    filter: blur(0px);
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding: 15px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+     user-select: none; 
+    border: 5px groove #D4B572;
+}
+
+.fantasyspoil .lockcontent:before {
+    position: absolute;
+    content: url(attr);
+    box-shadow: inset 0 0 100px black;
+    background: url(https://www.worldanvil.com/uploads/images/2787de27b34b35dfe124df61281401db.png) no-repeat, url(https://www.worldanvil.com/uploads/images/4d8e17cae309446a70acb31a3a318f15.png) repeat;
+   background-position: center;
+    background-size: contain, 1000px;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    transition: all 1s;
+}
+
+.fantasyspoil .lockbutton .spoiler-button[aria-expanded$=true] ~ .lockcontent {
+    filter: blur(0px) !important;
+    -webkit-touch-callout: auto;
+    -webkit-user-select: auto; 
+    -khtml-user-select: auto; 
+    -moz-user-select: auto;
+    -ms-user-select: auto; 
+     user-select: auto; 
+    transition: all 1s;
+}
+
+.fantasyspoil .lockbutton .spoiler-button:hover ~ .lockcontent:before {
+    background: url(https://www.worldanvil.com/uploads/images/90b75284687e673deef3e727f09dac5c.png) no-repeat, url(https://www.worldanvil.com/uploads/images/4d8e17cae309446a70acb31a3a318f15.png) repeat;
+   background-position: center;
+    background-size: contain, 1000px;
+    box-shadow: inset 0 0 100px rgba(150,150,150,0.1);
+}
+
+@keyframes fadeout {
+ 0% {opacity: 100%;}
+ 90% {opacity: 0%;
+    display:block;}
+ 100% {display: none !important;
+    opacity: 0%;
+    z-index: -10;}
+}
+.fantasyspoil .lockbutton .spoiler-button[aria-expanded$=true]  ~ .lockcontent:before {
+    animation-name: fadeout;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+}
+
+.fantasyspoil .lockbutton .spoiler-button {
+    background: url(https://www.worldanvil.com/uploads/images/e2dcd5c73a7dbe057a46c0c2d5e50367.png) no-repeat;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    width: 36px;
+    height: 156px;
+    padding: 16px;
+    position: relative;
+    top: 165px;
+    left: 15px;
+    transition: all .5s;
+    animation-name: none !important;
+}
+.fantasyspoil .lockbutton .spoiler-button:hover {
+    background: url(https://www.worldanvil.com/uploads/images/f152bc5f854e381389c9a9144073f555.png) no-repeat;
+}
+.fantasyspoil .lockbutton .spoiler-button:active {
+    left: 35px;
+}
