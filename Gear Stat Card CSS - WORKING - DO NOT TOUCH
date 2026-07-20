@@ -1,6 +1,5 @@
 /* ==========================================
-   PHB-STYLE GEAR STAT CARD
-   WORLD ANVIL CONTAINER: [container:gear-card]
+   PHB-STYLE GEAR STAT CARD CONTAINER
 ========================================== */
 
 .user-css .gear-card {
