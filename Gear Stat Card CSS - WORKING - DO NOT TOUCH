@@ -1,5 +1,6 @@
 /* ==========================================
-   PHB-STYLE GEAR STAT CARD CONTAINER
+   PHB-STYLE GEAR STAT CARD
+   WORLD ANVIL CONTAINER: [container:gear-card]
 ========================================== */
 
 .user-css .gear-card {
@@ -13,7 +14,7 @@
   margin: 30px auto;
   padding: 68px 76px 66px;
 
-  background-color: transparent !important;
+  background: transparent !important;
 
   color: #21170f;
 
@@ -35,15 +36,23 @@
   hyphens: auto;
 }
 
-/* Rotates only the parchment image */
+/* ==========================================
+   ROTATED PARCHMENT IMAGE
+========================================== */
 
-.user-css .gear-card::before {
-  content: "";
-  position: absolute;
+.user-css .gear-card .gear-card-image {
+  position: absolute !important;
   inset: 0;
   z-index: 0;
 
-  background-color: transparent;
+  display: block !important;
+  width: 100%;
+  height: 100%;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background-color: transparent !important;
   background-image:
     url(https://wa-cdn.nyc3.digitaloceanspaces.com/user-data/production/c4e07060-742c-422d-972b-be3e8bccf927/uploads/images/c9d5ca29575b5b7d32d8162d8e599e6a.png);
   background-position: center center;
@@ -53,12 +62,15 @@
   transform: rotate(180deg);
   transform-origin: center center;
 
+  font-size: 0;
+  line-height: 0;
+
   pointer-events: none;
 }
 
-/* Keeps card content above the rotated image */
+/* Keeps all actual card content above the parchment */
 
-.user-css .gear-card > * {
+.user-css .gear-card > :not(.gear-card-image) {
   position: relative;
   z-index: 2;
 }
