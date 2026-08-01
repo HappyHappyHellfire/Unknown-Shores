@@ -1,0 +1,66 @@
+/* Unknown Shores 2.31 — World Anvil Theme - Don't Fuck This Up */
+/* SolomonJack · UnknownShoresRPG.com */
+
+/* FONTS */
+
+@font-face {
+  font-family: CinzelDecorative;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cinzeldecorative/v6/daaCSScvJGqLYhG8nNt8KPPswUAPni7TTMw.woff2);
+}
+
+@font-face {
+  font-family: EBGaramond;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v9/SlGUmQSNjdsmc35JDF1K5GR7SDktYw.woff2);
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lora/v12/4vqKRIwnQQGUQQh-PnvdMA.woff2);
+}
+
+@font-face {
+  font-family: JimNightshade;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jimnightshade/v20/PlIkFlu9Pb08Q8HLM1PxmB0g-NS_XXs.woff2);
+}
+
+@font-face {
+  font-family: Cardo;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cardo/v20/wlp_gwjKBV1pqhv43IE.woff2);
+}
+
+@font-face {
+  font-family: IslandMoments;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/islandmoments/v7/NaPBcZfVGvBdxIt7Ar0qzkXJF9TBKIk.woff2);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v30/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2);
+}
+
+/* VARIABLES */
+
+:root {
+  --font-header: JimNightshade, Georgia, Times New Roman, serif;
+  --font-display: CinzelDecorative, Georgia, Times New Roman, serif;
